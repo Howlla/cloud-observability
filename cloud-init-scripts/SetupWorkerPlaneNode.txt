@@ -48,4 +48,3 @@ sudo systemctl enable containerd.service
 
 
 #From worker node run kubeadm token create --print-join-command
-kubeadm join 10.52.2.213:6443 --token vetbb6.lydj8yhrkjsqw7ee --discovery-token-ca-cert-hash sha256:249e9ddd44146717664f2e18d7de3ddfd994bee221d701333c5474742322f745
