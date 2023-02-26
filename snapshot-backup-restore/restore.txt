@@ -1,0 +1,27 @@
+
+
+
+sudo rm -rf /var/lib/etcd2/*
+sudo rm -f /etc/systemd/system/etcd*
+sudo reboot
+kubectl get pods
+cd $HOME/.kube/
+ls
+nano config
+rm config
+rm -rf cache/
+kubeadm reset
+cd /etc/
+ls
+cd kubernetes/
+ls
+sudo kubeadm init --kubernetes-version v1.24.3
+kubectl get pods
+cd $HOME
+ls
+mkdir -p $HOME/.kube
+sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+sudo chown $(id -u):$(id -g) $HOME/.kube/config
+kubectl apply -f calico.yaml
+kubectl get pods
+kubectl get pods --all-namespaces
