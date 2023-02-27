@@ -62,7 +62,7 @@ data:
       - job_name: 'k8pods'
         kubernetes_sd_configs:
         - role: pod
-        scheme:https
+        scheme: https
         relabel_configs:
         - source_labels: [__meta_kubernetes_pod_container_port_name]
           regex: metrics
