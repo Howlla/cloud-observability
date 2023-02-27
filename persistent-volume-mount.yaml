@@ -11,5 +11,5 @@ spec:
     storage: 50Gi
   accessModes:
     - ReadWriteMany
-  hostpath:
+  hostPath:
     path: "/mnt/promdata"
