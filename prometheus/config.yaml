@@ -32,7 +32,7 @@ data:
       - job_name: 'kubelet'
         kubernetes_sd_configs:
         - role: node
-        scheme: http
+        scheme: https
         tls_config:
           ca_file: /var/run/secrets/kubernetes.io/serviceaccount/ca.crt
           insecure_skip_verify: true  # Required with Minikube.
