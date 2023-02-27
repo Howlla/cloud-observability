@@ -39,7 +39,7 @@ data:
       - job_name: 'cadvisor'
         kubernetes_sd_configs:
         - role: node
-        scheme: http
+        scheme: https
         tls_config:
           ca_file: /var/run/secrets/kubernetes.io/serviceaccount/ca.crt
           insecure_skip_verify: true  # Required with Minikube.
@@ -62,7 +62,6 @@ data:
       - job_name: 'k8pods'
         kubernetes_sd_configs:
         - role: pod
-        scheme: https
         relabel_configs:
         - source_labels: [__meta_kubernetes_pod_container_port_name]
           regex: metrics
@@ -72,7 +71,7 @@ data:
       - job_name: 'k8apiserver'
         kubernetes_sd_configs:
         - role: endpoints
-        scheme: http
+        scheme: https
         tls_config:
           ca_file: /var/run/secrets/kubernetes.io/serviceaccount/ca.crt
           insecure_skip_verify: true  # Required if using Minikube.
