@@ -16,8 +16,9 @@ spec:
     spec:
       securityContext:
           fsGroup: 472
-          userGroup: 472
-          runAsGroup: 472
+          runAsGroup: 0
+          runAsNonRoot: false
+          runAsUser: 0
       containers:
       - name: grafana
         image: grafana/grafana:latest
