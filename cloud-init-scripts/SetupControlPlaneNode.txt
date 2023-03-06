@@ -18,7 +18,7 @@ sudo sysctl --system
 sudo apt-get install -y containerd
 wget https://github.com/containerd/containerd/releases/download/v1.6.12/containerd-1.6.12-linux-amd64.tar.gz
 tar xvf containerd-1.6.12-linux-amd64.tar.gz
-systemctl stop containerd
+sudo systemctl stop containerd
 cd bin
 sudo cp * /usr/bin/
 sudo systemctl start containerd
@@ -38,7 +38,7 @@ sudo apt-get update
 
 apt-cache policy kubelet | head -n 20 
 
-VERSION=1.24.3-00
+VERSION=1.25.6-00
 sudo apt-get install -y kubelet=$VERSION kubeadm=$VERSION kubectl=$VERSION
 sudo apt-mark hold kubelet kubeadm kubectl containerd
 
@@ -46,7 +46,7 @@ sudo systemctl enable kubelet.service
 sudo systemctl enable containerd.service
 
 cd 
-sudo kubeadm init --kubernetes-version v1.24.3
+sudo kubeadm init --kubernetes-version v1.25.6
 
 mkdir -p $HOME/.kube
 sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
