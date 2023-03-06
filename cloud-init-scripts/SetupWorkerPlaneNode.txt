@@ -20,7 +20,7 @@ sudo sysctl --system
 sudo apt-get install -y containerd
 wget https://github.com/containerd/containerd/releases/download/v1.6.12/containerd-1.6.12-linux-amd64.tar.gz
 tar xvf containerd-1.6.12-linux-amd64.tar.gz
-systemctl stop containerd
+sudo systemctl stop containerd
 cd bin
 sudo cp * /usr/bin/
 sudo systemctl start containerd
@@ -40,7 +40,7 @@ sudo apt-get update
 
 apt-cache policy kubelet | head -n 20 
 
-VERSION=1.24.3-00
+VERSION=1.25.6-00
 sudo apt-get install -y kubelet=$VERSION kubeadm=$VERSION kubectl=$VERSION
 sudo apt-mark hold kubelet kubeadm kubectl containerd
 
