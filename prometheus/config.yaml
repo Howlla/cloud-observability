@@ -113,3 +113,6 @@ data:
       - job_name: 'kube-state-metrics'
         static_configs:
         - targets: ['kube-state-metrics.kube-system.svc.cluster.local:8080']
+      - job_name: 'node-exporter'
+        static_configs:
+        - targets: ['localhost:9100']
