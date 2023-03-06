@@ -113,7 +113,7 @@ data:
       - job_name: 'kube-state-metrics'
         static_configs:
         - targets: ['kube-state-metrics.kube-system.svc.cluster.local:8080']
-      - job_name: 'node-exporter'
+      - job_name: 'node'
         kubernetes_sd_configs:
         - role: endpoints
         relabel_configs:
