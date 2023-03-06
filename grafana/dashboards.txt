@@ -1,0 +1,3 @@
+1. Kubernetes Deployment Statefulset Daemonset metrics - 8588
+2. Cadvisor - 14282
+3. Cluster monitoring - 315
