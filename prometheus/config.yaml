@@ -122,4 +122,4 @@ data:
           action: keep
       - job_name: "eBPF"
         static_configs:
-        - targets: ['localhost:9435']
+        - targets: ['10.31.0.134:9435']
