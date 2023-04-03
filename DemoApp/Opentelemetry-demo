@@ -1,6 +1,7 @@
-curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3
-chmod 700 get_helm.sh
-./get_helm.sh
-
 helm repo add open-telemetry https://open-telemetry.github.io/opentelemetry-helm-charts
+
 helm install my-otel-demo open-telemetry/opentelemetry-demo
+
+OpenTelemetry Collector OTLP/HTTP receiver (required for browser spans to be emitted):
+  by running these commands:
+     kubectl port-forward svc/my-otel-demo-otelcol 4318:4318
