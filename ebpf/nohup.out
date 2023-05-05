@@ -1,0 +1,110 @@
+libbpf: loading examples/biolatency.bpf.o
+libbpf: elf: section(3) raw_tp/block_rq_insert, size 160, link 0, flags 6, type=1
+libbpf: sec 'raw_tp/block_rq_insert': found program 'block_rq_insert' at insn offset 0 (0 bytes), code size 20 insns (160 bytes)
+libbpf: elf: section(4) .relraw_tp/block_rq_insert, size 32, link 31, flags 40, type=9
+libbpf: elf: section(5) raw_tp/block_rq_issue, size 160, link 0, flags 6, type=1
+libbpf: sec 'raw_tp/block_rq_issue': found program 'block_rq_issue' at insn offset 0 (0 bytes), code size 20 insns (160 bytes)
+libbpf: elf: section(6) .relraw_tp/block_rq_issue, size 32, link 31, flags 40, type=9
+libbpf: elf: section(7) raw_tp/block_rq_complete, size 1544, link 0, flags 6, type=1
+libbpf: sec 'raw_tp/block_rq_complete': found program 'block_rq_complete' at insn offset 0 (0 bytes), code size 193 insns (1544 bytes)
+libbpf: elf: section(8) .relraw_tp/block_rq_complete, size 128, link 31, flags 40, type=9
+libbpf: elf: section(9) .maps, size 64, link 0, flags 3, type=1
+libbpf: elf: section(10) license, size 4, link 0, flags 3, type=1
+libbpf: license of examples/biolatency.bpf.o is GPL
+libbpf: elf: section(21) .BTF, size 7498, link 0, flags 0, type=1
+libbpf: elf: section(23) .BTF.ext, size 1980, link 0, flags 0, type=1
+libbpf: elf: section(31) .symtab, size 1056, link 1, flags 0, type=2
+libbpf: looking for externs among 44 symbols...
+libbpf: collected 1 externs total
+libbpf: extern (kcfg) #0: symbol 38, off 0, name LINUX_KERNEL_VERSION
+libbpf: map 'start': at sec_idx 9, offset 0.
+libbpf: map 'start': found type = 1.
+libbpf: map 'start': found key [8], sz = 8.
+libbpf: map 'start': found value [17], sz = 8.
+libbpf: map 'start': found max_entries = 10000.
+libbpf: map 'bio_latency_seconds': at sec_idx 9, offset 32.
+libbpf: map 'bio_latency_seconds': found type = 1.
+libbpf: map 'bio_latency_seconds': found key [73], sz = 16.
+libbpf: map 'bio_latency_seconds': found value [17], sz = 8.
+libbpf: map 'bio_latency_seconds': found max_entries = 7140.
+libbpf: map 'biolate.kconfig' (global data): at sec_idx 31, offset 0, flags 480.
+libbpf: map 2 is "biolate.kconfig"
+libbpf: sec '.relraw_tp/block_rq_insert': collecting relocation for section(3) 'raw_tp/block_rq_insert'
+libbpf: sec '.relraw_tp/block_rq_insert': relo #0: insn #0 against 'LINUX_KERNEL_VERSION'
+libbpf: prog 'block_rq_insert': found extern #0 'LINUX_KERNEL_VERSION' (sym 38) for insn #0
+libbpf: sec '.relraw_tp/block_rq_insert': relo #1: insn #14 against 'start'
+libbpf: prog 'block_rq_insert': found map 0 (start, sec 9, off 0) for insn #14
+libbpf: sec '.relraw_tp/block_rq_issue': collecting relocation for section(5) 'raw_tp/block_rq_issue'
+libbpf: sec '.relraw_tp/block_rq_issue': relo #0: insn #0 against 'LINUX_KERNEL_VERSION'
+libbpf: prog 'block_rq_issue': found extern #0 'LINUX_KERNEL_VERSION' (sym 38) for insn #0
+libbpf: sec '.relraw_tp/block_rq_issue': relo #1: insn #14 against 'start'
+libbpf: prog 'block_rq_issue': found map 0 (start, sec 9, off 0) for insn #14
+libbpf: sec '.relraw_tp/block_rq_complete': collecting relocation for section(7) 'raw_tp/block_rq_complete'
+libbpf: sec '.relraw_tp/block_rq_complete': relo #0: insn #6 against 'start'
+libbpf: prog 'block_rq_complete': found map 0 (start, sec 9, off 0) for insn #6
+libbpf: sec '.relraw_tp/block_rq_complete': relo #1: insn #141 against 'bio_latency_seconds'
+libbpf: prog 'block_rq_complete': found map 1 (bio_latency_seconds, sec 9, off 32) for insn #141
+libbpf: sec '.relraw_tp/block_rq_complete': relo #2: insn #149 against 'bio_latency_seconds'
+libbpf: prog 'block_rq_complete': found map 1 (bio_latency_seconds, sec 9, off 32) for insn #149
+libbpf: sec '.relraw_tp/block_rq_complete': relo #3: insn #154 against 'bio_latency_seconds'
+libbpf: prog 'block_rq_complete': found map 1 (bio_latency_seconds, sec 9, off 32) for insn #154
+libbpf: sec '.relraw_tp/block_rq_complete': relo #4: insn #167 against 'bio_latency_seconds'
+libbpf: prog 'block_rq_complete': found map 1 (bio_latency_seconds, sec 9, off 32) for insn #167
+libbpf: sec '.relraw_tp/block_rq_complete': relo #5: insn #175 against 'bio_latency_seconds'
+libbpf: prog 'block_rq_complete': found map 1 (bio_latency_seconds, sec 9, off 32) for insn #175
+libbpf: sec '.relraw_tp/block_rq_complete': relo #6: insn #180 against 'bio_latency_seconds'
+libbpf: prog 'block_rq_complete': found map 1 (bio_latency_seconds, sec 9, off 32) for insn #180
+libbpf: sec '.relraw_tp/block_rq_complete': relo #7: insn #188 against 'start'
+libbpf: prog 'block_rq_complete': found map 0 (start, sec 9, off 0) for insn #188
+libbpf: loading kernel BTF '/sys/kernel/btf/vmlinux': 0
+libbpf: extern (kcfg) 'LINUX_KERNEL_VERSION': set to 0x50f4e
+libbpf: map 'start': created successfully, fd=8
+libbpf: map 'bio_latency_seconds': created successfully, fd=9
+libbpf: map 'biolate.kconfig': created successfully, fd=10
+libbpf: sec 'raw_tp/block_rq_insert': found 2 CO-RE relocations
+libbpf: CO-RE relocating [78] struct bpf_raw_tracepoint_args: found target candidate [29032] struct bpf_raw_tracepoint_args in [vmlinux]
+libbpf: prog 'block_rq_insert': relo #0: <byte_off> [78] struct bpf_raw_tracepoint_args.args[1] (0:0:1 @ offset 8)
+libbpf: prog 'block_rq_insert': relo #0: matching candidate #0 <byte_off> [29032] struct bpf_raw_tracepoint_args.args[1] (0:0:1 @ offset 8)
+libbpf: prog 'block_rq_insert': relo #0: patched insn #4 (LDX/ST/STX) off 8 -> 8
+libbpf: prog 'block_rq_insert': relo #1: <byte_off> [78] struct bpf_raw_tracepoint_args.args[0] (0:0:0 @ offset 0)
+libbpf: prog 'block_rq_insert': relo #1: matching candidate #0 <byte_off> [29032] struct bpf_raw_tracepoint_args.args[0] (0:0:0 @ offset 0)
+libbpf: prog 'block_rq_insert': relo #1: patched insn #6 (LDX/ST/STX) off 0 -> 0
+libbpf: sec 'raw_tp/block_rq_issue': found 2 CO-RE relocations
+libbpf: prog 'block_rq_issue': relo #0: <byte_off> [78] struct bpf_raw_tracepoint_args.args[1] (0:0:1 @ offset 8)
+libbpf: prog 'block_rq_issue': relo #0: matching candidate #0 <byte_off> [29032] struct bpf_raw_tracepoint_args.args[1] (0:0:1 @ offset 8)
+libbpf: prog 'block_rq_issue': relo #0: patched insn #4 (LDX/ST/STX) off 8 -> 8
+libbpf: prog 'block_rq_issue': relo #1: <byte_off> [78] struct bpf_raw_tracepoint_args.args[0] (0:0:0 @ offset 0)
+libbpf: prog 'block_rq_issue': relo #1: matching candidate #0 <byte_off> [29032] struct bpf_raw_tracepoint_args.args[0] (0:0:0 @ offset 0)
+libbpf: prog 'block_rq_issue': relo #1: patched insn #6 (LDX/ST/STX) off 0 -> 0
+libbpf: sec 'raw_tp/block_rq_complete': found 8 CO-RE relocations
+libbpf: prog 'block_rq_complete': relo #0: <byte_off> [78] struct bpf_raw_tracepoint_args.args[0] (0:0:0 @ offset 0)
+libbpf: prog 'block_rq_complete': relo #0: matching candidate #0 <byte_off> [29032] struct bpf_raw_tracepoint_args.args[0] (0:0:0 @ offset 0)
+libbpf: prog 'block_rq_complete': relo #0: patched insn #0 (LDX/ST/STX) off 0 -> 0
+libbpf: CO-RE relocating [86] struct request___x: found target candidate [2215] struct request in [vmlinux]
+libbpf: prog 'block_rq_complete': relo #1: <field_exists> [86] struct request___x.rq_disk (0:1 @ offset 8)
+libbpf: prog 'block_rq_complete': relo #1: matching candidate #0 <field_exists> [2215] struct request.rq_disk (0:15 @ offset 160)
+libbpf: prog 'block_rq_complete': relo #1: patched insn #75 (ALU/ALU64) imm 1 -> 1
+libbpf: prog 'block_rq_complete': relo #2: <byte_off> [86] struct request___x.rq_disk (0:1 @ offset 8)
+libbpf: prog 'block_rq_complete': relo #2: matching candidate #0 <byte_off> [2215] struct request.rq_disk (0:15 @ offset 160)
+libbpf: prog 'block_rq_complete': relo #2: patched insn #77 (ALU/ALU64) imm 8 -> 160
+libbpf: prog 'block_rq_complete': relo #3: <byte_off> [86] struct request___x.q (0:0 @ offset 0)
+libbpf: prog 'block_rq_complete': relo #3: matching candidate #0 <byte_off> [2215] struct request.q (0:0 @ offset 0)
+libbpf: prog 'block_rq_complete': relo #3: patched insn #79 (ALU/ALU64) imm 0 -> 0
+libbpf: CO-RE relocating [88] struct request_queue___x: found target candidate [1651] struct request_queue in [vmlinux]
+libbpf: prog 'block_rq_complete': relo #4: <byte_off> [88] struct request_queue___x.disk (0:0 @ offset 0)
+libbpf: prog 'block_rq_complete': relo #4: matching candidate #0 <byte_off> [1651] struct request_queue.disk (0:15 @ offset 120)
+libbpf: prog 'block_rq_complete': relo #4: patched insn #85 (ALU/ALU64) imm 0 -> 120
+libbpf: CO-RE relocating [9] struct request: found target candidate [2215] struct request in [vmlinux]
+libbpf: prog 'block_rq_complete': relo #5: <byte_off> [9] struct request.cmd_flags (0:3 @ offset 24)
+libbpf: prog 'block_rq_complete': relo #5: matching candidate #0 <byte_off> [2215] struct request.cmd_flags (0:3 @ offset 24)
+libbpf: prog 'block_rq_complete': relo #5: patched insn #93 (ALU/ALU64) imm 24 -> 24
+libbpf: CO-RE relocating [89] struct gendisk: found target candidate [2163] struct gendisk in [vmlinux]
+libbpf: prog 'block_rq_complete': relo #6: <byte_off> [89] struct gendisk.first_minor (0:1 @ offset 4)
+libbpf: prog 'block_rq_complete': relo #6: matching candidate #0 <byte_off> [2163] struct gendisk.first_minor (0:1 @ offset 4)
+libbpf: prog 'block_rq_complete': relo #6: patched insn #104 (ALU/ALU64) imm 4 -> 4
+libbpf: prog 'block_rq_complete': relo #7: <byte_off> [89] struct gendisk.major (0:0 @ offset 0)
+libbpf: prog 'block_rq_complete': relo #7: matching candidate #0 <byte_off> [2163] struct gendisk.major (0:0 @ offset 0)
+libbpf: prog 'block_rq_complete': relo #7: patched insn #113 (ALU/ALU64) imm 0 -> 0
+2023/05/05 04:59:37 Started with 1 programs found in the config in 23ms
+2023/05/05 04:59:37 Listening on :9435
+2023/05/05 04:59:37 Error listening on :9435: listen tcp :9435: bind: address already in use

@@ -1,0 +1,1 @@
+sudo ./ebpf_exporter --config.dir examples --config.names accept-latency,biolatency,bpf-jit,cachestat,cgroup,llcstat,oomkill,raw-tracepoints,shrinklat,tcp-syn-backlog,timers,uprobe
